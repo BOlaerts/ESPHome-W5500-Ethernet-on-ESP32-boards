@@ -6,4 +6,67 @@ Playing around with the ESP32C3 Super Mini board:
 # Hardware wiring schema
 <img src="/../main/pictures/esp32c3-super-mini-w5500-bmp280.png" width="40%" alt= "Schematic" height="40%">
 
-# ESPHome setup
+# ESPHome code
+``` yaml
+esphome:
+  name: esp32c3-super-mini
+  friendly_name: esp32c3-super-mini
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: arduino
+
+web_server:
+  port: 80
+
+# Enable logging
+logger:
+  level: DEBUG
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "RJ0NKBLK2tJoSKaBDgGHM8oiASWnIAe31LRZi0vWM7w="
+
+ota:
+  password: "f4335e5c51447e86b68a635233ac9399"
+
+external_components:
+- source:
+    type: git
+    url: https://github.com/JeroenVanOort/esphome/
+    ref: eth-w5500
+  components:
+  - ethernet
+
+ethernet:
+  type: W5500
+  mosi_pin: GPIO10
+  miso_pin: GPIO09
+  clk_pin: GPIO08
+  cs_pin: GPIO5
+  reset_pin: GPIO04
+  interrupt_pin: GPIO03
+  clock_speed: 25MHz
+
+i2c:
+  scl: GPIO07
+  sda: GPIO06
+  scan: True
+  id: bus_a
+
+sensor:
+  - platform: bmp280
+    temperature:
+      name: "Temperatuur"
+      unit_of_measurement: °C
+      accuracy_decimals: 1
+    pressure:
+      name: "Luchtdruk"
+      unit_of_measurement: hPa
+      accuracy_decimals: 0
+    i2c_id: bus_a
+    address: 0x76
+
+```
