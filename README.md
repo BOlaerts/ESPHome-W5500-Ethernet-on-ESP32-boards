@@ -1,4 +1,4 @@
-# ESP32C3 Super Mini
+en# ESP32C3 Super Mini
 Playing around with the amazing ESP32C3 Super Mini board:
 - connected to the W5500 ethernet module, using the fantastic work of Jeroen Van Oort described in https://github.com/esphome/esphome/pull/4424
 - connected to a I²C BMP280 temperature/pressure sensor
@@ -59,11 +59,11 @@ i2c:
 sensor:
   - platform: bmp280
     temperature:
-      name: "Temperatuur"
+      name: "Temperature"
       unit_of_measurement: °C
       accuracy_decimals: 1
     pressure:
-      name: "Luchtdruk"
+      name: "Pressure"
       unit_of_measurement: hPa
       accuracy_decimals: 0
     i2c_id: bus_a
