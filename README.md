@@ -6,6 +6,8 @@ Playing around with the amazing ESP32C3 Super Mini board:
 # Hardware wiring schema
 <img src="/../main/pictures/esp32c3-super-mini-w5500-bmp280.png" width="40%" alt= "Schematic" height="40%">
 
+And even with this small sized board, there is some room for extra connections!
+
 # ESPHome config
 In my experience, the easiest way of flashing the new ESP32C3 boards is by using the [Adafruit ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/).
 ``` yaml
