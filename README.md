@@ -6,7 +6,7 @@ Home Assistant integration using ESPHome on a ESP32C3-SuperMini board with W5500
 - connected to a I²C BMP280 temperature/pressure sensor
 
 # Hardware wiring schema
-<img src="/../main/pictures/esp32c3-super-mini-w5500-bmp280.png" width="40%" alt= "Schematic" height="40%">
+<img src="/../main/pictures/esp32c3-super-mini-w5500-bmp280.png" width="40%" alt= "Wiring" height="40%">
 
 And even with this small sized board, there is some room for extra connections!
 
@@ -79,4 +79,6 @@ Working on a pcb design for a small board with ethernet connection and exposure 
 
 See PCB folder for first design attempt.
 
-<img src="/../main/pictures/Schematic_ESP32-C3-SuperMini W5500 Ehternet I2C_2024-01-16.png" width="40%" alt= "Schematic" height="40%">
+<img src="/../main/pictures/Schematic_ESP32-C3-SuperMini W5500 Ehternet I2C_2024-01-16.png" width="50%" alt= "Schematic" height="50%">
+
+<img src="/../main/pictures/PCB_3D-view.png" width="50%" alt= "Schematic" height="50%">
