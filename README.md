@@ -75,7 +75,7 @@ sensor:
 
 ```
 # PCB design
-Working on a pcb design for a small board with ethernet connection and exposure of all remaining GPIOs.
+Work in progress on a pcb design for a small board with ethernet connection and exposure of all remaining GPIOs.
 
 See PCB folder for first design attempt.
 
