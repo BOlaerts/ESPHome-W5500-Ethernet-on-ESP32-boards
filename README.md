@@ -9,6 +9,8 @@ Playing around with the amazing ESP32C3 Super Mini board:
 And even with this small sized board, there is some room for extra connections!
 
 # ESPHome config
+I didn't get it to work using the esp-idf framework, as presented in Jeroens config, but arduino does the trick for me.
+So far, connection seems to be ligthning fast and super stable.
 In my experience, the easiest way of flashing the new ESP32C3 boards is by using the [Adafruit ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/).
 ``` yaml
 esphome:
