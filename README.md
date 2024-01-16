@@ -1,4 +1,4 @@
-en# ESP32C3 Super Mini
+# ESP32C3 Super Mini
 Playing around with the amazing ESP32C3 Super Mini board:
 - connected to the W5500 ethernet module, using the fantastic work of Jeroen Van Oort described in https://github.com/esphome/esphome/pull/4424
 - connected to a I²C BMP280 temperature/pressure sensor
