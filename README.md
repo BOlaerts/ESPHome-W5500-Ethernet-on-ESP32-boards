@@ -78,3 +78,5 @@ sensor:
 Working on a pcb design for a small board with ethernet connection and exposure of all remaining GPIOs.
 
 See PCB folder for first design attempt.
+
+<img src="/../main/pictures/Schematic_ESP32-C3-SuperMini W5500 Ehternet I2C_2024-01-16.png" width="40%" alt= "Schematic" height="40%">
