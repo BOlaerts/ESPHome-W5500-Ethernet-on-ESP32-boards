@@ -1,5 +1,7 @@
 # ESP32C3 Super Mini
-Playing around with the amazing ESP32C3 Super Mini board:
+Playing around with the amazing ESP32C3 Super Mini board.
+
+Home Assistant integration using ESPHome on a ESP32C3-SuperMini board with W5500 ethernet and I²C sensor:
 - connected to the W5500 ethernet module, using the fantastic work of Jeroen Van Oort described in https://github.com/esphome/esphome/pull/4424
 - connected to a I²C BMP280 temperature/pressure sensor
 
