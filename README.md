@@ -10,6 +10,11 @@ Home Assistant integration using ESPHome on a ESP32C3-SuperMini board with W5500
 
 And even with this small sized board, there is some room for extra connections!
 
+Possible improvements to investigate:
+- CLK wire for the W5500 SPI bus is set to GPIO08
+- GPIO08 is also the linked to the status led of the ESP32 C3 super mini development board
+- possible or better to use GPIO02 instead?
+
 # ESPHome config
 I didn't get it to work using the esp-idf framework, as presented in Jeroens config, but arduino does the trick for me.
 So far, connection seems to be ligthning fast and super stable.
