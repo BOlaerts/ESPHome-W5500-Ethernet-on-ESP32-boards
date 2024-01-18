@@ -1,4 +1,4 @@
-# ESP32C3 Super Mini Ethernet
+# ESP32C3 Super Mini W5500 Ethernet
 Playing around with the amazing ESP32C3 Super Mini board.
 
 Home Assistant integration using ESPHome on a ESP32C3-SuperMini board with W5500 ethernet and I²C sensor:
