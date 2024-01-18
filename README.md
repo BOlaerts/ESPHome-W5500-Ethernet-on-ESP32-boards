@@ -14,6 +14,7 @@ Possible improvements to investigate:
 - CLK wire for the W5500 SPI bus is set to GPIO08
 - GPIO08 is also the linked to the status led of the ESP32 C3 super mini development board
 - possible or better to use GPIO02 instead?
+- update 18.01.2024: switching CLK to GPIO02 did not seem to work...
 
 # ESPHome config
 I didn't get it to work using the esp-idf framework, as presented in Jeroens config, but arduino does the trick for me.
