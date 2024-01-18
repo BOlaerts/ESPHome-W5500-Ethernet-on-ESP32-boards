@@ -17,9 +17,7 @@ Possible improvements to investigate:
 - update 18.01.2024: switching CLK to GPIO02 did not seem to work...
 
 # ESPHome config
-I didn't get it to work using the esp-idf framework, as presented in Jeroens config, but arduino does the trick for me.
-So far, connection seems to be ligthning fast and super stable.
-In my experience, the easiest way of flashing the new ESP32C3 boards is by using the [Adafruit ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/).
+At first, I only got it to work by using the arduino framework.
 ``` yaml
 esphome:
   name: esp32c3-super-mini
@@ -29,9 +27,6 @@ esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: arduino
-
-web_server:
-  port: 80
 
 # Enable logging
 logger:
@@ -78,8 +73,29 @@ sensor:
       accuracy_decimals: 0
     i2c_id: bus_a
     address: 0x76
-
 ```
+
+After some iterations, it also works with the esp-idf framework; some tweaking of the platformio options were needed:
+``` yaml
+esphome:
+  name: esp32c3-super-mini-idf
+  friendly_name: esp32c3-super-mini-idf
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.mcu: esp32c3
+    board_build.f_cpu: 160000000L
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: esp-idf
+```
+
+So far, connection seems to be ligthning fast and super stable.
+
+In my experience, the easiest way of flashing the new ESP32C3 boards is by using the [Adafruit ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/).
+
+
 # PCB design
 Work in progress on a pcb design for a small board with ethernet connection and exposure of all remaining GPIOs.
 
