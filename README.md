@@ -17,7 +17,7 @@ Possible improvements to investigate:
 - update 18.01.2024: switching CLK to GPIO02 did not seem to work...
 
 # ESPHome config
-At first, I only got it to work by using the arduino framework.
+At first, I only got it to work with the arduino framework:
 ``` yaml
 esphome:
   name: esp32c3-super-mini
@@ -75,7 +75,7 @@ sensor:
     address: 0x76
 ```
 
-After some iterations, it also works with the esp-idf framework; some tweaking of the platformio options were needed:
+After some iterations, it also works with the esp-idf framework; some tweaking of the platformio options was necessary:
 ``` yaml
 esphome:
   name: esp32c3-super-mini-idf
@@ -91,7 +91,7 @@ esp32:
     type: esp-idf
 ```
 
-So far, connection seems to be ligthning fast and super stable.
+So far, connection seems to be lightning fast and super stable.
 
 In my experience, the easiest way of flashing the new ESP32C3 boards is by using the [Adafruit ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/).
 
