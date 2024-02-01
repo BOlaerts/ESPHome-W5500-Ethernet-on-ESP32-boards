@@ -1,11 +1,10 @@
-# ESP32C3 Super Mini W5500 Ethernet
-Playing around with the amazing ESP32C3 Super Mini board.
+# Introduction
+Playing around with the ESPHOME and W5500 ethernet module on different ESP32 boards.
+Goal is to be able to use SPI for ethernet and I²C for other sensors or extensions.
 
-Home Assistant integration using ESPHome on a ESP32C3-SuperMini board with W5500 ethernet and I²C sensor:
-- connected to the W5500 ethernet module, using the fantastic work of Jeroen Van Oort described in https://github.com/esphome/esphome/pull/4424
-- connected to a I²C BMP280 temperature/pressure sensor
+# ESP32C3 Super Mini
 
-# Hardware wiring schema
+## Hardware wiring schema
 <img src="/../main/pictures/esp32c3-super-mini-w5500-bmp280.png" width="40%" alt= "Wiring" height="40%">
 
 And even with this small sized board, there is some room for extra connections!
@@ -16,7 +15,7 @@ Possible improvements to investigate:
 - possible or better to use GPIO02 instead?
 - update 18.01.2024: switching CLK to GPIO02 did not seem to work...
 
-# ESPHome config
+## ESPHome config
 At first, I only got it to work with the arduino framework:
 ``` yaml
 esphome:
@@ -96,7 +95,7 @@ So far, connection seems to be lightning fast and super stable.
 In my experience, the easiest way of flashing the new ESP32C3 boards is by using the [Adafruit ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/).
 
 
-# PCB design
+## PCB design
 Work in progress on a pcb design for a small board with ethernet connection and exposure of all remaining GPIOs.
 
 See PCB folder for first design attempt.
