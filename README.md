@@ -107,3 +107,79 @@ See PCB folder for first design attempt.
 # SEEED XIAO ESP32C3
 
 ## Hardware wiring schema
+<img src="/../main/pictures/seeed-xiao-esp32c3-w5500-bmp280.png" width="40%" alt= "Wiring" height="40%">
+
+Two more pins left for other purposes!
+
+## ESPHome config
+I didn't manage to get the board working with the arduino framework.
+Esp-idf framework works fine as follows:
+``` yaml
+esphome:
+  name: seeed-xiao-c3-w5500
+  friendly_name: seeed-xiao-c3-w5500
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.mcu: esp32c3
+    board_build.f_cpu: 160000000L
+
+esp32:
+  board: seeed_xiao_esp32c3
+  variant: esp32c3
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+external_components:
+- source:
+    type: git
+    url: https://github.com/JeroenVanOort/esphome/
+    ref: eth-w5500
+  components:
+  - ethernet
+
+ethernet:
+  type: W5500
+  mosi_pin: GPIO10
+  miso_pin: GPIO09
+  clk_pin: GPIO08
+  cs_pin: GPIO4
+  reset_pin: GPIO02
+  interrupt_pin: GPIO03
+  clock_speed: 25MHz
+
+i2c:
+  scl: GPIO07
+  sda: GPIO06
+  scan: True
+  id: bus_a
+
+sensor:
+  - platform: bmp280
+    temperature:
+      name: "Temperature"
+      unit_of_measurement: °C
+      accuracy_decimals: 1
+    pressure:
+      name: "Pressure"
+      unit_of_measurement: hPa
+      accuracy_decimals: 0
+    i2c_id: bus_a
+    address: 0x76
+
+binary_sensor:
+  - platform: status
+    name: "Status"
+
+text_sensor:
+  - platform: ethernet_info
+    ip_address:
+      name: IP Address
+```
