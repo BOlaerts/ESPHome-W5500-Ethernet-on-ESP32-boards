@@ -147,28 +147,28 @@ external_components:
 
 ethernet:
   type: W5500
-  mosi_pin: GPIO10
-  miso_pin: GPIO09
-  clk_pin: GPIO08
-  cs_pin: GPIO4
-  reset_pin: GPIO02
-  interrupt_pin: GPIO03
+  mosi_pin: 10
+  miso_pin: 9
+  clk_pin: 8
+  cs_pin: 4
+  reset_pin: 2
+  interrupt_pin: 3
   clock_speed: 25MHz
 
 i2c:
-  scl: GPIO07
-  sda: GPIO06
+  scl: 7
+  sda: 6
   scan: True
   id: bus_a
 
 sensor:
   - platform: bmp280
     temperature:
-      name: "Temperature"
+      name: "Temperatuur"
       unit_of_measurement: °C
       accuracy_decimals: 1
     pressure:
-      name: "Pressure"
+      name: "Luchtdruk"
       unit_of_measurement: hPa
       accuracy_decimals: 0
     i2c_id: bus_a
@@ -182,4 +182,8 @@ text_sensor:
   - platform: ethernet_info
     ip_address:
       name: IP Address
+
+switch:
+  - platform: restart
+    name: "Restart"
 ```
