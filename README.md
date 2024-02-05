@@ -103,3 +103,7 @@ See PCB folder for first design attempt.
 <img src="/../main/pictures/Schematic_ESP32-C3-SuperMini W5500 Ehternet I2C_2024-01-16.png" width="50%" alt= "Schematic" height="50%">
 
 <img src="/../main/pictures/PCB_3D-view.png" width="50%" alt= "Schematic" height="50%">
+
+# SEEED XIAO ESP32C3
+
+## Hardware wiring schema
