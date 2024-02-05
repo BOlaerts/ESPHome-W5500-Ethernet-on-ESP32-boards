@@ -2,6 +2,11 @@
 Playing around with the ESPHOME and W5500 ethernet module on different ESP32 boards.
 Goal is to be able to use SPI for ethernet and I²C for other sensors or extensions.
 
+# Table of contents
+1. [ ESP32C3 Super Mini. ](#esp32c3supermini)
+2. [ SEEED XIAO ESP32C3. ](#seeedxiaoesp32c3)
+
+<a name="esp32c3supermini"></a>
 # ESP32C3 Super Mini
 
 ## Hardware wiring schema
@@ -104,6 +109,7 @@ See PCB folder for first design attempt.
 
 <img src="/../main/pictures/PCB_3D-view.png" width="50%" alt= "Schematic" height="50%">
 
+<a name="seeedxiaoesp32c3"></a>
 # SEEED XIAO ESP32C3
 
 ## Hardware wiring schema
