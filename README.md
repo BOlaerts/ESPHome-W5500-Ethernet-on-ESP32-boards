@@ -197,3 +197,61 @@ switch:
 
 <a name="lilygotethlite"></a>
 # LILYGO T-ETH-Lite ESP32S3
+## Hardware wiring schema
+<img src="/../main/pictures/LILYGO-T-ETH-LITE-ESP32-S3.jpg" width="40%" alt= "Wiring" height="40%">
+
+Flashing: see https://github.com/Xinyuan-LilyGO/LilyGO-T-ETH-Series?tab=readme-ov-file
+I managed to get the board operational, but I had to upload the code from within ESPHome in Home Assistant; uploading a bin file did not work.
+
+## ESPHome config
+``` yaml
+esphome:
+  name: lilygo-t-eth-lite-w5500
+  friendly_name: lilygo-t-eth-lite-w5500
+  platformio_options:
+    board_build.flash_mode: dio
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+external_components:
+- source:
+    type: git
+    url: https://github.com/JeroenVanOort/esphome/
+    ref: eth-w5500
+  components:
+  - ethernet
+
+ethernet:
+  type: W5500
+  mosi_pin: 12
+  miso_pin: 11
+  clk_pin: 10
+  cs_pin: 9
+  reset_pin: 14
+  interrupt_pin: 13
+  clock_speed: 25MHz
+
+binary_sensor:
+  - platform: status
+    name: "Status"
+
+text_sensor:
+  - platform: ethernet_info
+    ip_address:
+      name: IP Address
+
+switch:
+  - platform: restart
+    name: "Restart"
+```
