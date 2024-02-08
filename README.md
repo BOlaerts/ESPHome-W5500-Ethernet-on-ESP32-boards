@@ -201,6 +201,7 @@ switch:
 <img src="/../main/pictures/LILYGO-T-ETH-LITE-ESP32-S3.jpg" width="40%" alt= "Wiring" height="40%">
 
 Flashing: see https://github.com/Xinyuan-LilyGO/LilyGO-T-ETH-Series?tab=readme-ov-file
+
 I managed to get the board operational, but I had to upload the code from within ESPHome in Home Assistant; uploading a bin file did not work.
 
 ## ESPHome config
