@@ -5,6 +5,7 @@ Goal is to be able to use SPI for ethernet and I²C for other sensors or extensi
 # Table of contents
 1. [ ESP32C3 Super Mini ](#esp32c3supermini)
 2. [ SEEED XIAO ESP32C3 ](#seeedxiaoesp32c3)
+3. [ LILYGO T-ETH-Lite ](#lilygotethlite)
 
 <a name="esp32c3supermini"></a>
 # ESP32C3 Super Mini
@@ -193,3 +194,6 @@ switch:
   - platform: restart
     name: "Restart"
 ```
+
+<a name="lilygotethlite"></a>
+# LILYGO T-ETH-Lite ESP32S3
