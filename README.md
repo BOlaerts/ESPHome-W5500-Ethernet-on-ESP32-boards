@@ -42,14 +42,6 @@ api:
 
 ota:
 
-external_components:
-- source:
-    type: git
-    url: https://github.com/JeroenVanOort/esphome/
-    ref: eth-w5500
-  components:
-  - ethernet
-
 ethernet:
   type: W5500
   mosi_pin: GPIO10
@@ -144,14 +136,6 @@ api:
 
 ota:
 
-external_components:
-- source:
-    type: git
-    url: https://github.com/JeroenVanOort/esphome/
-    ref: eth-w5500
-  components:
-  - ethernet
-
 ethernet:
   type: W5500
   mosi_pin: 10
@@ -224,14 +208,6 @@ logger:
 api:
 
 ota:
-
-external_components:
-- source:
-    type: git
-    url: https://github.com/JeroenVanOort/esphome/
-    ref: eth-w5500
-  components:
-  - ethernet
 
 ethernet:
   type: W5500
